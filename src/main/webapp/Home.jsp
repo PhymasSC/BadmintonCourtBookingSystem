@@ -11,11 +11,10 @@
 <main>
     <%@include file="./partials/_navbar.jsp"%>
     <p class="text-[99em]">
-        <%                int[] a = {1, 2, 3, 4};
-
-            for (int val : a) {
-                out.println(val);
-            }
-        %>
-    </p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</p>
 </main>
