@@ -11,10 +11,5 @@
 <main>
     <%@include file="./partials/_navbar.jsp"%>
     <p class="text-[99em]">
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-</p>
+    </p>
 </main>

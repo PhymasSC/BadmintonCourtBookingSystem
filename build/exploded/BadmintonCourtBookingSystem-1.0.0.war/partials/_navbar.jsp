@@ -52,12 +52,7 @@
                 <%
                 } else {
                 %>
-                <div class="dropdown dropdown-end">
-                    <a href="/BadmintonCourtBookingSystem/Register.jsp"><button class="btn btn-ghost">Get Started!</button></a>
-                    <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                        <li><a>Login</a></li>
-                    </ul>
-                </div>
+                <a href="/BadmintonCourtBookingSystem/Register.jsp"><button class="btn btn-ghost">Get Started!</button></a>
                 <%
                     }
                 %>
