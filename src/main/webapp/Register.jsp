@@ -1,15 +1,49 @@
 <%-- 
-    Document   : Login
-    Created on : 28 May 2022, 00:25:16
-    Author     : SC
+    Document   : Register
+    Created on : 29 May 2022, 11:40:05 pm
+    Author     : ASUS
 --%>
 
-<%@page contentType="text/html" pageEncoding="windows-1252"%>
-<%@include file="./partials/_default.jsp"%>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>JSP Page</title>
-</head>
-<body>
-    <%@include file="./partials/_navbar.jsp"%>
-</body>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+         pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <h1>Register Form</h1>
+        <form action="register" method="post">
+            <table style="with: 50%">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="first_name" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="last_name" /></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email" /></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" /></td>
+                </tr>
+                <tr>
+                    <td>Contact No</td>
+                    <td><input type="text" name="contact" /></td>
+                </tr></table>
+            <input type="submit" value="Submit" /></form>
+    </body>
+</html>
