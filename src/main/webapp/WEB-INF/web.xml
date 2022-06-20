@@ -1,13 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- Views -->
     <servlet>
-        <servlet-name>User</servlet-name>
-        <servlet-class>BadmintonCourtBookingSystem.User</servlet-class>
+        <servlet-name>Register</servlet-name>
+        <jsp-file>/views/authentication_pages/Register.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <jsp-file>/views/authentication_pages/Login.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Profile</servlet-name>
+        <jsp-file>/views/authentication_pages/Profile.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Courts</servlet-name>
+        <jsp-file>/views/Courts.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Court</servlet-name>
+        <jsp-file>/views/Court.jsp</jsp-file>
+    </servlet>
+
+    <!-- Error pages -->
+    <error-page>
+        <!-- Missing resource -->
+        <error-code>403</error-code>
+        <location>/views/error_pages/Error-403.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Missing resource -->
+        <error-code>404</error-code>
+        <location>/views/error_pages/Error-404.jsp</location>
+    </error-page>
+
+    <!-- Processors -->
+    <servlet>
+        <servlet-name>ProfileProcess</servlet-name>
+        <jsp-file>/processes/Profile.jsp</jsp-file>
+        <multipart-config>
+            <max-file-size>10485760</max-file-size>
+            <max-request-size>20971520</max-request-size>
+            <file-size-threshold>5242880</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginProcess</servlet-name>
+        <jsp-file>/processes/Login.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>BookingProcess</servlet-name>
+        <jsp-file>/processes/Booking.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterProcess</servlet-name>
+        <jsp-file>/processes/Register.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>CourtSearching</servlet-name>
+        <jsp-file>/processes/CourtSearching.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>CourtProcess</servlet-name>
+        <jsp-file>/processes/Court.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>BookingDeletion</servlet-name>
+        <jsp-file>/processes/BookingDeletion.jsp</jsp-file>
+    </servlet>
+
+    <!-- URL Mapping -->
     <servlet-mapping>
-        <servlet-name>User</servlet-name>
-        <url-pattern>/User</url-pattern>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Profile</servlet-name>
+        <url-pattern>/User/*</url-pattern>
+        <url-pattern>/user/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Courts</servlet-name>
+        <url-pattern>/Courts</url-pattern>
+        <url-pattern>/courts</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Court</servlet-name>
+        <url-pattern>/Court/*</url-pattern>
+        <url-pattern>/court/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileProcess</servlet-name>
+        <url-pattern>/UserProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginProcess</servlet-name>
+        <url-pattern>/LoginProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookingProcess</servlet-name>
+        <url-pattern>/BookingProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterProcess</servlet-name>
+        <url-pattern>/RegisterProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CourtSearching</servlet-name>
+        <url-pattern>/CourtSearching</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CourtProcess</servlet-name>
+        <url-pattern>/CourtProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BookingDeletion</servlet-name>
+        <url-pattern>/BookingDeletion</url-pattern>
+    </servlet-mapping>
+
     <session-config>
         <session-timeout>
             30
